@@ -1,0 +1,216 @@
+:root {
+  --black: #232632;
+  --purple: #784ef4;
+  --green: #aff500;
+  --white: #f5f5f5;
+  --blue: #00d8f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: poet;
+  src: url(../assets/fonts/poetsenone.ttf);
+}
+
+@font-face {
+  font-family: krona;
+  src: url(../assets/fonts/kronaone.ttf);
+}
+
+body {
+  background-color: var(--black);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 1%;
+  z-index: 3;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  font-family: "krona";
+  color: var(--white);
+  width: 30%;
+  border-radius: 2rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(35, 38, 50, 0.2));
+  height: 3rem;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+nav span:hover {
+  cursor: pointer;
+}
+
+span.active_page {
+  color: var(--green);
+}
+
+#olho {
+  width: 38%;
+  position: absolute;
+  left: 4%;
+}
+
+#faixa {
+  position: absolute;
+  right: 10rem;
+  z-index: 1;
+  top: 0;
+  width: 18%;
+}
+
+main {
+  width: 100%;
+}
+
+.welcome_container {
+  height: 100vh;
+  position: relative;
+}
+
+.welcome_text {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  bottom: 50%;
+  transform: translateY(20%);
+  right: 22%;
+}
+
+.line_one {
+  font-family: "poet";
+  color: var(--green);
+  font-size: 3rem;
+}
+
+.line_two {
+  font-family: "krona";
+  color: transparent;
+  -webkit-text-stroke: 4px var(--blue);
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.line_three {
+  font-family: "krona";
+  color: var(--white);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+section .about_container {
+  heigh: 100vh;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+#titulo {
+  font-family: "krona";
+  -webkit-text-stroke: 2px var(--purple);
+  color: transparent;
+  font-size: 4rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: "poet";
+  color: var(--green);
+}
+
+.about_grid div {
+  background: linear-gradient(rgba(80, 59, 152, 1), rgba(35, 38, 50, 1));
+  border-radius: 20px;
+  box-shadow: 6px 6px 13px rgba(162, 89, 255, 0.2);
+}
+
+.about_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  grid-template-areas:
+    "descrition img skills"
+    "links img education"
+    "tecs tecs education";
+  margin: 0, 5rem;
+}
+
+.about_grid p {
+  color: var(--white);
+  font-family: "krona";
+  font-size: 1rem;
+  padding: 6%;
+}
+
+.about_grid span {
+  color: var(--green);
+  font-size: 1.6rem;
+  font-family: "poet";
+  display: flex;
+  justify-content: center;
+}
+
+.about_grid .about_links img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.about_grid #links {
+  font-size: 2rem;
+}
+
+.about_descrition {
+  grid-area: descrition;
+}
+
+.about_img {
+  grid-area: img;
+}
+
+.about_skills {
+  grid-area: skills;
+}
+
+.about_links {
+  grid-area: links;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about_education {
+  grid-area: education;
+}
+
+.about_tecs img {
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
+.about_grid #tecs {
+  font-size: 2rem;
+}
+
+.about_tecs {
+  grid-area: tecs;
+  grid-column: 1/3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
