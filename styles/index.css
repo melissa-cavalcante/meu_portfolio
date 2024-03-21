@@ -143,16 +143,14 @@ h1 {
 .about_grid {
   display: grid;
   height: 100vh;
+  gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 1.5rem; 
-  /*grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   grid-template-areas:
     "descrition img skills"
     "descrition img skills"
     "links links education"
-    "tecs tecs education";*/
+    "tecs tecs education";
 }
 
 .about_grid p {
@@ -181,13 +179,11 @@ h1 {
 }
 
 .about_descrition {
-  /*grid-area: descrition;*/
-  grid-area: 1 / 1 / 4 / 2;
+  grid-area: descrition;
 }
 
 .about_img {
-  /*grid-area: img;*/
-  grid-area: 1 / 2 / 4 / 3; 
+  grid-area: img;
 }
 
 .about_img img {
@@ -196,21 +192,18 @@ h1 {
 }
 
 .about_skills {
-  /*grid-area: skills;*/
-  grid-area: 1 / 3 / 3 / 4;
+  grid-area: skills;
 }
 
 .about_links {
-  /*grid-area: links;*/
+  grid-area: links;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  grid-area: 4 / 1 / 5 / 3;
 }
 
 .about_education {
-  /*grid-area: education;*/
-  grid-area: 3 / 3 / 5 / 4;
+  grid-area: education;
 }
 
 .about_tecs img {
@@ -223,8 +216,7 @@ h1 {
 }
 
 .about_tecs {
-  /*grid-area: tecs;*/
-  grid-area: 5 / 1 / 6 / 4;
+  grid-area: tecs;
   display: flex;
   justify-content: space-around;
   align-items: center;
