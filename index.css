@@ -13,12 +13,12 @@
 
 @font-face {
   font-family: poet;
-  src: url(../assets/fonts/poetsenone.ttf);
+  src: url(./assets/fonts/poetsenone.ttf);
 }
 
 @font-face {
   font-family: krona;
-  src: url(../assets/fonts/kronaone.ttf);
+  src: url(./assets/fonts/kronaone.ttf);
 }
 
 body {
@@ -114,7 +114,7 @@ main {
 section {
   position: relative;
   z-index: 1;
-  height: 100vh;
+  height: 105vh;
 }
 
 #titulo {
@@ -128,6 +128,7 @@ h1 {
   font-size: 2rem;
   font-family: "poet";
   color: var(--green);
+  margin: 0 3rem;
 }
 
 .about_grid {
@@ -220,7 +221,15 @@ h1 {
   width: 4rem;
 }
 
+.projects_container .projects_unit{
+  padding: 2.5rem 0;
+  border-bottom: 2px solid #784ef4;
+}
+
 .projects_container img {
-  height: 25rem;
+  height: 16rem;
   width: 25rem;
+  position: absolute;
+  right: 2rem;
+  bottom: 5rem;
 }
