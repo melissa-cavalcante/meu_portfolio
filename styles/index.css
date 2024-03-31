@@ -220,3 +220,7 @@ h1 {
   width: 4rem;
 }
 
+.projects_container img {
+  height: 25rem;
+  width: 25rem;
+}
