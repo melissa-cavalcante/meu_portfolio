@@ -163,6 +163,7 @@ h1 {
   text-align: left;
   margin: 3%;
   font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 .about_grid .about_img {
@@ -218,11 +219,11 @@ h1 {
 }
 
 .about_tecs img {
-  height: 4rem;
-  width: 4rem;
+  min-height: 4rem;
+  min-width: 4rem;
 }
 
-.projects_container .projects_unit{
+.projects_container .project_unit{
   padding: 2.5rem 0;
   border-bottom: 2px solid #784ef4;
 }

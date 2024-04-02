@@ -4,6 +4,6 @@ document.querySelectorAll(".project_unit").forEach(project => {
     })
 
     project.addEventListener("mouseleave", e => {
-        document.getElementById("project_img").setAttribute("src", `./assets/img/faixa.svg`);
+        document.getElementById("project_img").setAttribute("src", `./assets/img/img-preview.svg`);
     })
 })
