@@ -228,6 +228,14 @@ h1 {
   border-bottom: 2px solid #784ef4;
 }
 
+.projects_container .project_unit #titulo-projeto {
+  color: var(--white);
+}
+
+.projects_container .project_unit #titulo-projeto:hover{
+  color: var(--green);
+}
+
 .projects_container img {
   height: 16rem;
   width: 25rem;
