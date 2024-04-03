@@ -160,7 +160,7 @@ h1 {
 .about_grid p {
   font-family: "krona";
   color: var(--white);
-  text-align: left;
+  text-align: center;
   margin: 3%;
   font-size: 0.9rem;
   letter-spacing: 1px;
@@ -243,3 +243,6 @@ h1 {
   right: 2rem;
   bottom: 5rem;
 }
+
+/* responsividade */
+
