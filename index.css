@@ -227,6 +227,8 @@ h1 {
   min-width: 4rem;
 }
 
+/*projects*/
+
 .projects_container .project_unit{
   padding: 2.5rem 0;
   border-bottom: 2px solid #784ef4;
@@ -257,7 +259,7 @@ h1 {
   section {
     position: relative;
     z-index: 1;
-    height: 114vh;
+    height: 120vh;
   }
 
   /*home*/
@@ -365,5 +367,20 @@ h1 {
 
   .about_education span {
     font-size: 1.5rem;
+  }
+
+  /*projects*/
+
+  .projects_container .project_unit{
+    padding: 3rem 0;
+    border-bottom: 4px solid #784ef4;
+  }
+
+  .projects_container img {
+    height: 22rem;
+    width: 32rem;
+    position: absolute;
+    right: 2rem;
+    bottom: 18rem;
   }
 }
