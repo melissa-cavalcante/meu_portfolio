@@ -92,6 +92,8 @@ main {
   font-family: "poet";
   color: var(--green);
   font-size: 3rem;
+  display: flex;
+  justify-content: center;
 }
 
 .line_two {
@@ -246,3 +248,49 @@ h1 {
 
 /* responsividade */
 
+@media screen and (max-width: 1920px){
+  /*home*/
+  nav {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    font-family: "krona";
+    color: var(--white);
+    width: 30%;
+    border-radius: 2rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(35, 38, 50, 0.2));
+    height: 4rem;
+    align-items: center;
+    backdrop-filter: blur(4px);
+  }
+
+  .line_one {
+    font-family: "poet";
+    color: var(--green);
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .line_two {
+    font-family: "krona";
+    color: transparent;
+    -webkit-text-stroke: 4px var(--blue);
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .line_three {
+    font-family: "krona";
+    color: var(--white);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  /*grid*/
+
+  
+}
