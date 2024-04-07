@@ -118,6 +118,7 @@ section {
   position: relative;
   z-index: 1;
   height: 105vh;
+  margin-bottom: 5rem;
 }
 
 #titulo {
@@ -253,7 +254,7 @@ h1 {
 
 /* responsividade */
 
-@media screen and (max-width: 1920px){
+@media screen and (min-width: 1920px){
 
   /*principal*/
 
