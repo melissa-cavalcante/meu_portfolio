@@ -254,7 +254,7 @@ h1 {
 
 /* responsividade */
 
-@media screen and (max-width: 400px){
+@media only screen and (max-width: 600px){
   nav {
     display: none;
   }
