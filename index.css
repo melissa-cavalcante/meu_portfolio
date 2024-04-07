@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--black);
 }
 
 header {
@@ -254,7 +254,155 @@ h1 {
 
 /* responsividade */
 
+@media screen and (max-width: 300px){
+  nav {
+    display: none;
+  }
 
+  #olho {
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: auto;
+  }
+
+  #faixa {
+    display: none;
+  }
+
+  .welcome_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+  }
+  
+  .welcome_text {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    bottom: 70%;
+    transform: translateY(20%);
+    width: 100%;
+    right: auto;
+  }
+
+  .line_one {
+    font-family: "poet";
+    color: var(--green);
+    font-size: 1.9rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .line_two {
+    font-family: "krona";
+    color: transparent;
+    -webkit-text-stroke: 2px var(--blue);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .line_three {
+    font-family: "krona";
+    color: var(--white);
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #titulo {
+    font-family: "krona";
+    -webkit-text-stroke: 1px var(--purple);
+    color: transparent;
+    font-size: 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-family: "poet";
+    color: var(--green);
+    margin: 0 1rem 0.5rem;
+    width: 100%;
+  }
+
+  .about_grid .about_descrition {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  .about_grid {
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    grid-auto-rows: minmax(50px, auto); 
+    gap: 0.5rem; 
+    margin: 0 auto 2rem;
+  }
+
+  .about_grid h2 {
+    font-family: "poet";
+    color: var(--green);
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .about_grid p {
+    font-family: "krona";
+    color: var(--white);
+    text-align: left;
+    margin: 0.5%;
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  .about_grid .about_img {
+    grid-column: 3/6;
+    grid-row: 1/3;
+    height: 10rem;
+  }
+
+  .about_grid .about_links img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .about_tecs img {
+    min-height: 5rem;
+    min-width: 5rem;
+  }
+
+  .about_education img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .about_education span {
+    font-size: 2rem;
+  }
+
+  .about_grid .about_education {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+
+  .about_grid .about_skills {
+    grid-column: 3/6;
+    grid-row: 4/5;
+  }
+
+  .about_grid .about_links {
+    grid-column: 1/3;
+    grid-row: 6/6;
+  }
+
+  .about_grid .about_tecs {
+    grid-column: 3/6;
+    grid-row: 6/6;
+  }
+}
 
 /* 1920px pra cima */
 @media screen and (min-width: 1920px){
