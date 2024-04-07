@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: var(--black);
+  background-color: var(--white);
 }
 
 header {
@@ -254,6 +254,9 @@ h1 {
 
 /* responsividade */
 
+
+
+/* 1920px pra cima */
 @media screen and (min-width: 1920px){
 
   /*principal*/
