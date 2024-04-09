@@ -260,10 +260,11 @@ h1 {
   }
 
   #olho {
-    width: 80%;
+    width: 70%;
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: auto;
+    height: 80%;
   }
 
   #faixa {
@@ -358,19 +359,20 @@ h1 {
     font-family: "krona";
     color: var(--white);
     text-align: left;
-    margin: 1%;
-    font-size: 0.5rem;
+    margin: 3%;
+    font-size: 0.6rem;
     letter-spacing: 2px;
+
   }
 
   .about_grid .about_links img {
-    height: 1rem;
-    width: 1rem;
+    height: 2rem;
+    width: 2rem;
   }
 
   .about_tecs img {
-    min-height: 1rem;
-    min-width: 1rem;
+    height: 0.5rem;
+    width: 0.5rem;
   }
 
   .about_education img {
@@ -395,7 +397,7 @@ h1 {
   
   .about_grid .about_education {
     grid-column: 1/4;
-    grid-row: 5/7;
+    grid-row: 5/6;
   }
 
   .about_grid .about_skills {
@@ -405,12 +407,16 @@ h1 {
 
   .about_grid .about_links {
     grid-column: 1/4;
-    grid-row: 7/7;
+    grid-row: 6/7;
   }
 
   .about_grid .about_tecs {
-    grid-column: 4/7;
+    grid-column: 1/7;
     grid-row: 7/7;
+  }
+
+  .projects_container img{
+    display: none;
   }
 }
 
