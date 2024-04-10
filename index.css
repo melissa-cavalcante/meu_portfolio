@@ -262,7 +262,7 @@ h1 {
   #olho {
     width: 70%;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: auto;
     height: 80%;
   }
@@ -317,7 +317,7 @@ h1 {
 
   #titulo {
     font-family: "krona";
-    -webkit-text-stroke: 1px var(--purple);
+    -webkit-text-stroke: 2px var(--purple);
     color: transparent;
     font-size: 3rem;
   }
@@ -371,8 +371,8 @@ h1 {
   }
 
   .about_tecs img {
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 1rem;
+    width: 1rem;
   }
 
   .about_education img {
