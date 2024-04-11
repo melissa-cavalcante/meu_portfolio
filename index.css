@@ -259,10 +259,17 @@ h1 {
     display: none;
   }
 
+  section {
+    position: relative;
+    z-index: 1;
+    height: 105vh;
+    margin: 0 2rem 2.5rem;
+  }
+
   #olho {
     width: 70%;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: auto;
     height: 80%;
   }
