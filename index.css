@@ -260,9 +260,7 @@ h1 {
   }
 
   section {
-    position: relative;
-    z-index: 1;
-    height: 105vh;
+    height: 90vh;
     margin: 0 2rem 0.5rem;
   }
 
