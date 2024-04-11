@@ -410,7 +410,12 @@ h1 {
     grid-column: 1/4;
     grid-row: 6/7;
   }
-  
+
+  .about_grid .about_tecs {
+    grid-column: 1/7;
+    grid-row: 7/7;
+  }
+
   .projects_container img{
     display: none;
   }
