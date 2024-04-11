@@ -144,7 +144,6 @@ h1 {
   grid-template-columns: repeat(9, 1fr); 
   grid-auto-rows: minmax(100px, auto); 
   gap: 0.5rem; 
-  margin: 0 auto;
 }
 
 .about_grid div {
@@ -226,8 +225,8 @@ h1 {
 }
 
 .about_tecs img {
-  min-height: 4rem;
-  min-width: 4rem;
+  height: 4rem;
+  width: 4rem;
 }
 
 /*projects*/
@@ -336,7 +335,6 @@ h1 {
     grid-template-columns: repeat(6, 1fr); 
     grid-auto-rows: minmax(50px, auto); 
     gap: 0.5rem; 
-    margin: 0 auto 2rem;
   }
 
   .about_grid div {
@@ -372,8 +370,8 @@ h1 {
   }
 
   .about_grid .about_tecs img {
-    height: 2%;
-    width: 2%;
+    height: 2.5rem;
+    width: 2.5rem;
   }
 
   .about_education img {
@@ -495,7 +493,6 @@ h1 {
     grid-template-columns: repeat(9, 1fr); 
     grid-auto-rows: minmax(150px, auto); 
     gap: 1rem; 
-    margin: 0 auto 2rem;
   }
 
   .about_grid h2 {
