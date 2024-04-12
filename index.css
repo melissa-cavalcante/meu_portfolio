@@ -254,13 +254,13 @@ h1 {
 
 /* responsividade */
 
-@media only screen and (min-width: 300px){
+@media only screen and (max-width: 300px){
   nav {
     display: none;
   }
 
   section {
-    height: 60vh;
+    height: 70vh;
     margin: 0 2rem 0.5rem;
   }
 
@@ -357,6 +357,7 @@ h1 {
 
   .about_grid .about_img img {
     border-radius: 10px;
+    height: 100%;
   }
 
   .about_grid p {
@@ -600,8 +601,6 @@ h1 {
   /*principal*/
 
   section {
-    position: relative;
-    z-index: 1;
     height: 120vh;
   }
 
