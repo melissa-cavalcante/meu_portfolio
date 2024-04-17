@@ -262,7 +262,7 @@ h1 {
   }
 
   section {
-    height: 100vh;
+    height: 80vh;
     margin: 0 2rem 0.5rem;
   }
 
@@ -373,7 +373,7 @@ h1 {
   .about_grid .about_img {
     grid-column: 4/7;
     grid-row: 1/5;
-    height: 30vh;
+    height: 40vh;
   }
   
   .about_grid .about_education {
