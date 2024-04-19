@@ -374,7 +374,7 @@ h1 {
   .about_grid .about_img {
     grid-column: 4/7;
     grid-row: 1/5;
-    height: 60vh;
+    height: 37vh;
   }
   
   .about_grid .about_education {
