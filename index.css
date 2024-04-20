@@ -255,7 +255,7 @@ h1 {
 
 @media only screen and 
 (min-width: 300px) and
-(max-width: 599px){
+(max-width: 600px){
 
   nav {
     display: none;
@@ -374,7 +374,7 @@ h1 {
   .about_grid .about_img {
     grid-column: 4/7;
     grid-row: 1/5;
-    height: 40vh;
+    height: 45vh;
   }
   
   .about_grid .about_education {
