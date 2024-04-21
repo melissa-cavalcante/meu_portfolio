@@ -262,7 +262,7 @@ h1 {
   }
 
   section {
-    height: 110vh;
+    height: 100vh;
     margin: 0 2rem 0.5rem;
   }
 
@@ -406,14 +406,14 @@ h1 {
 
 @media only screen and 
 (min-width: 360px) and
-(max-width: 430px){
+(max-width: 400px){
 
   nav {
     display: none;
   }
 
   section {
-    height: 110vh;
+    height: 100vh;
     margin: 0 2rem 0.5rem;
   }
 
@@ -527,7 +527,7 @@ h1 {
   .about_grid .about_img {
     grid-column: 4/7;
     grid-row: 1/5;
-    height: 30vh;
+    height: 50vh;
   }
   
   .about_grid .about_education {
@@ -555,7 +555,7 @@ h1 {
   }
 }
 
-/* @media only screen and 
+@media only screen and 
 (min-width: 400px) and
 (max-width: 500px){
 
@@ -704,7 +704,7 @@ h1 {
   .projects_container img{
     display: none;
   }
-} */
+}
 
 @media only screen and
 (min-width: 600px) and 
