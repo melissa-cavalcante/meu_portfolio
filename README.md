@@ -1,7 +1,9 @@
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=150&color=FE428E&reversal=false&section=header&textBg=false&fontColor=fff&strokeWidth=2&stroke=0"/>
+  <img width="100%" src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=26&duration=3500&pause=1000&color=FE428E&center=true&random=false&width=435&lines=Hello%2C+my+name+is+Melissa+;I'm+19+years+old;Brazilian+front-end+designer;Welcome!!"/>
+
 <h1 align="center">Hi 👋, I'm Melissa</h1>
 <h3 align="center">This is my first portfolio showcasing my work in Front-End Development and Web Design. The colors and design elements I've chosen are a reflection of my personality and personal style, blending creativity with functionality.</h3>
 
-<h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
 
