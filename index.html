@@ -13,25 +13,26 @@
 
 <body>
   <header>
-    <nav>
-      <h3 class="active_page">Home</h3>
-      <h3>Sobre</h3>
-      <h3>Projetos</h3>
-      <h3>Contato</h3>
+    <nav class="nav_list">
+      <ul>
+        <li><a href="#home" class="active_page">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+      </ul>
     </nav>
   </header>
   <img src="./assets/img/faixa.svg" id="faixa" alt="ilustração de uma faixa abstrata" />
-  <main>
+  <main id="home">
     <div class="welcome_container">
       <div class="welcome_text">
-        <h1 class="line_one">Boas vindas ao meu</h1>
-        <h1 class="line_two">PORTFÓLIO</h1>
-        <h1 class="line_three">WEB DESIGN | DESENVOLVEDORA</h1>
+        <h1 class="line_main">Boas vindas ao meu</h1>
+        <h1 class="line_emphasis">PORTFÓLIO</h1>
+        <h1 class="line_description">WEB DESIGN | DESENVOLVEDORA</h1>
       </div>
       <img src="./assets/img/olho.svg" id="olho" alt="ilustração de um olho" />
     </div>
   </main>
-  <section class="about_container">
+  <section class="about_container" id="sobre">
     <h1><span id="titulo">01.</span>Sobre mim</h1>
     <div class="about_grid">
       <div class="about_descrition">
@@ -103,7 +104,7 @@
     </div>
   </section>
   <img src="./assets/img/flores.svg" alt="ilustração buque de flores" id="flores">
-  <section class="projects_container">
+  <article class="projects_container" id="projetos">
     <h1><span id="titulo">02.</span>Projetos</h1>
     <div projectName="getto" class="project_unit">
       <h1 id="titulo-projeto">Getto</h1>
@@ -120,7 +121,7 @@
     <div class="projects_img">
       <img src="./assets/img/img-preview.svg" id="project_img" alt="imagens de projetos">
     </div>
-  </section>
+  </article>
 </body>
 
 </html>
