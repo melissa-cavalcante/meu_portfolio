@@ -51,10 +51,23 @@ nav {
   font-size: var(--font-small);
 }
 
+.about_links a {
+  text-decoration: none;
+  color: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 nav a {
   text-decoration: none;
   font-family: "krona";
   color: var(--black);
+}
+
+nav a:hover {
+  color: var(--purple);
 }
 
 nav ul {
@@ -252,8 +265,9 @@ h1 {
 }
 
 .about_grid .about_links .links img {
-  height: auto;
-  width: auto;
+  margin: 1rem 0;
+  height: 4rem;
+  width: 4rem;
 }
 
 .about_grid .about_links img {
