@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=devide-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
   <meta name="description"
     content="Olá! Me chamo Melissa, sou desenvolvedora web & designer. Veja meus projetos, venha me conhecer!">
   <link rel="stylesheet" href="./index.css" />
@@ -18,6 +18,7 @@
         <li><a href="#home" class="active_page">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
@@ -93,35 +94,76 @@
         <h2 class="title">Linha do Tempo</h2>
         <h4 id="ano">2022-2023</h4>
         <h3>Etec de Guaianases - Desenvolvimento de Sistemas (Técnico)</h3>
-        <p>O curso técnico foi essencial para despertar meu interesse e paixão por programação e design, sendo meu primeiro contato com essas áreas.</p>
+        <p>O curso técnico foi essencial para despertar meu interesse e paixão por programação e design, sendo meu
+          primeiro contato com essas áreas.</p>
         <h4 id="ano">2023-2026</h4>
         <h3>Fatec Ferraz de Vasconcelos Análise e Desenvolvimento de sistemas (Tecnológico)</h3>
-        <p>A faculdade tem sido fundamental para consolidar meus conhecimentos em tecnologia e aplicar na prática o que aprendi no curso técnico, contribuindo para minha inserção no mercado de trabalho.</p>
+        <p>A faculdade tem sido fundamental para consolidar meus conhecimentos em tecnologia e aplicar na prática o que
+          aprendi no curso técnico, contribuindo para minha inserção no mercado de trabalho.</p>
         <h4 id="ano">2024 - Atual</h4>
         <h3>iFood - People Connect (Jovem Aprendiz)</h3>
-        <p>Meu primeiro emprego como jovem aprendiz no iFood tem sido essencial para meu crescimento profissional, proporcionando experiência prática e compreensão do ambiente corporativo.</p>
+        <p>Meu primeiro emprego como jovem aprendiz no iFood tem sido essencial para meu crescimento profissional,
+          proporcionando experiência prática e compreensão do ambiente corporativo.</p>
       </div>
     </div>
   </section>
   <img src="./assets/img/flores.svg" alt="ilustração buque de flores" id="flores">
   <article class="projects_container" id="projetos">
     <h1><span id="titulo">02.</span>Projetos</h1>
-    <div projectName="getto" class="project_unit">
-      <h1 id="titulo-projeto">Getto</h1>
-    </div>
-    <div projectName="blunt" class="project_unit">
-      <h1 id="titulo-projeto">Blunt</h1>
-    </div>
-    <div projectName="spectrum" class="project_unit">
-      <h1 id="titulo-projeto">Spectrum</h1>
-    </div>
-    <div projectName="marcaponto" class="project_unit" id="marcaponto">
-      <h1 id="titulo-projeto">MarcaPonto</h1>
-    </div>
-    <div class="projects_img">
-      <img src="./assets/img/img-preview.svg" id="project_img" alt="imagens de projetos">
+    <div class="grid-project">
+      <div class="card-project">
+        <img src="./assets/img/projetos/spectrum.jpg" alt="imagem do projeto Spectrum">
+        <div class="category">
+          <span>Web design</span>
+          <span>UX/UI</span>
+          <span>Front-end</span>
+        </div>
+        <h3>Spectrum - 2025</h3>
+        <p>Uma empresa fictícia desenvolvida para apresentarmos o projeto da faculdade.</p>
+      </div>
+      <div class="card-project">
+        <img src="./assets/img/projetos/avatar.jpg" alt="ilustração avatar">
+        <div class="category">
+          <span>Ilustração</span>
+          <span>Character design</span>
+        </div>
+        <h3>Avatar - 2025</h3>
+        <p>Ilustração digital desenvolvida no Figma, representando uma pessoa real com estilo próprio e foco visual.</p>
+      </div>
+      
+      <div class="card-project">
+        <img src="./assets/img/projetos/game_review.jpg" alt="imagem do projeto Game Review">
+        <div class="category">
+          <span>Web design</span>
+          <span>UX/UI</span>
+        </div>
+        <h3>Game Review - 2024</h3>
+        <p>Uma plataforma criada para escrever e compartilhar reviews de jogos</p>
+      </div>
+
+      <div class="card-project">
+        <img src="./assets/img/projetos/getto.jpg" alt="imagem do projeto Getto">
+        <div class="category">
+          <span>Web design</span>
+          <span>UX/UI</span>
+          <span>Front-end</span>
+        </div>
+        <h3>Getto - 2023</h3>
+        <p>Uma rede social desenvolvida para artistas negros e independentes divulgarem suas artes</p>
+      </div>
     </div>
   </article>
+  <footer class="contact_container" id="contato">
+    <h1><span id="titulo">03.</span>Contato</h1>
+    <div class="content_contact">
+      <p class="title_contact">Tem algum projeto em mente?</p>
+      <p>Entre em contato comigo através das minhas redes sociais!</p>
+      <button><a href="">Vamos conversar?</a></button>
+    </div>
+  </footer>
+      <div class="jardim">
+      <img src="./assets/img/flores-footer.svg" alt="ilustração de flores" id="jardim">
+    </div>
 </body>
 
 </html>

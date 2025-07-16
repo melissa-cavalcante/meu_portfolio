@@ -3,14 +3,15 @@
   --purple: #784ef4;
   --green: #aff500;
   --white: #f5f5f5;
-  --transparent-white: rgb(255, 255, 255, 0.4);
+  --transparent-white: rgb(255, 255, 255, 0.8);
   --transparent-purple: rgb(120, 78, 244, 0.2);
   --blue: #00d8f5;
   --font-title: 2rem;
   --font-small: 1rem;
-  --font-xs: 0.9rem;
+  --font-xs: 0.8rem;
   --spacing-md: 1rem;
   --radius-lg: 20px;
+  --spacing-small: 0.5rem;
 }
 
 * {
@@ -42,7 +43,7 @@ header {
 
 nav {
   margin-top: var(--spacing-md);
-  width: 20%;
+  width: 26%;
   border-radius: 2rem;
   background: var(--transparent-white);
   align-items: center;
@@ -53,7 +54,7 @@ nav {
 nav a {
   text-decoration: none;
   font-family: "krona";
-  color: var(--white);
+  color: var(--black);
 }
 
 nav ul {
@@ -65,7 +66,6 @@ nav ul {
 
 nav ul li {
   list-style-type: none;
-
 }
 
 nav ul li:hover {
@@ -73,7 +73,7 @@ nav ul li:hover {
 }
 
 .active_page {
-  color: var(--green);
+  color: var(--purple);
   font-weight: bold;
 }
 
@@ -106,7 +106,6 @@ main {
 .welcome_container {
   height: 100vh;
   position: relative;
-  margin-bottom: 5rem;
 }
 
 .welcome_text {
@@ -130,6 +129,7 @@ main {
   color: transparent;
   -webkit-text-stroke: 2px var(--blue);
   font-size: 3.5rem;
+  margin: 2rem 0;
 }
 
 .line_description {
@@ -139,18 +139,11 @@ main {
 
 }
 
-section {
-  position: relative;
-  z-index: 1;
-  height: 120vh;
-  margin: 0 10rem;
-}
-
-article {
-  position: relative;
-  z-index: 1;
-  height: 120vh;
-  margin: 0 10rem;
+section,
+article,
+footer {
+  padding-inline: 4rem;
+  margin: 6rem 0;
 }
 
 #titulo {
@@ -170,15 +163,16 @@ h1 {
   font-size: var(--font-title);
   font-family: "poet";
   color: var(--green);
+  margin-bottom: 2%;
 }
 
 .about_grid {
   display: grid;
-  max-width: 100vw;
-  height: 90vh;
+  width: 100%;
+  box-sizing: border-box;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
   gap: var(--spacing-md);
+  grid-auto-rows: min-content;
 }
 
 .about_grid div {
@@ -190,7 +184,7 @@ h1 {
 
 .about_grid .about_descrition {
   grid-column: 1/3;
-  grid-row: 1/3;
+  grid-row: 1/2;
 }
 
 .about_grid h2 {
@@ -204,7 +198,6 @@ h1 {
   font-family: "krona";
   color: var(--white);
   margin: 3%;
-  font-size: var(--font-xs);
   letter-spacing: 1px;
   line-height: 1.5rem;
   text-align: justify;
@@ -212,20 +205,22 @@ h1 {
 
 .about_grid .about_img {
   grid-column: 2/3;
-  grid-row: 3/4;
-  height: auto;
+  grid-row: 2/3;
   padding: 0;
+  height: auto;
+  align-self: start;
 }
 
 .about_grid .about_img img {
-  height: 100%;
   width: 100%;
+  height: auto;
+  max-height: 340px;
   border-radius: var(--radius-lg);
 }
 
 .about_grid .about_skill {
   grid-column: 1/2;
-  grid-row: 3/5;
+  grid-row: 2/4;
 }
 
 .about_grid .about_skill img {
@@ -239,6 +234,7 @@ h1 {
 
 .about_grid .about_links {
   grid-column: 2/3;
+  grid-row: 3/4;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -272,7 +268,7 @@ h1 {
 
 .about_grid .about_education {
   grid-column: 3/4;
-  grid-row: 1/5;
+  grid-row: 1/4;
 }
 
 .about_grid .about_education h3 {
@@ -296,871 +292,783 @@ h1 {
   margin-top: 2rem;
 }
 
-/*projects*/
-
-.projects_container .project_unit {
-  padding: 2.5rem 0;
-  border-bottom: 2px solid #784ef4;
+.contact_container .content_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  margin: 10rem 0;
 }
 
-.projects_container .project_unit #titulo-projeto {
-  color: var(--white);
+.contact_container .content_contact button {
+  background-color: var(--purple);
+  border: none;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  font-family: "krona";
 }
 
-.projects_container .project_unit #titulo-projeto:hover {
+.contact_container .content_contact a {
+  text-decoration: none;
   color: var(--green);
 }
 
-.projects_container img {
-  height: 16rem;
-  width: 25rem;
-  position: absolute;
-  right: 2rem;
-  bottom: 5rem;
+.contact_container .content_contact p {
+  font-family: "krona";
+  color: var(--white);
+  margin: var(--spacing-md);
+  font-size: var(--font-small);
+  margin-bottom: 2rem;
 }
+
+.contact_container .content_contact .title_contact {
+  font-size: var(--font-title);
+  margin: var(--spacing-small);
+}
+
+#jardim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.jardim {
+  margin-top: 3rem;
+}
+
+.projects_container {
+  margin-bottom: 6rem;
+}
+
+.projects_container .grid-project {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projects_container .grid-project .card-project {
+  background: var(--transparent-purple);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(16px);
+  padding: var(--spacing-md);
+}
+
+.projects_container .grid-project .card-project img {
+  width: 100%;
+  border-radius: 0.5rem;
+  height: 50%;
+}
+
+.projects_container .grid-project .card-project h3 {
+  font-family: "krona";
+  color: var(--white);
+}
+
+.projects_container .grid-project .card-project p {
+  color: var(--white);
+  font-family: "krona";
+  padding: 1rem 0;
+}
+
+.projects_container .grid-project .card-project .category {
+  padding: 1rem 0;
+}
+
+.projects_container .grid-project .card-project .category span {
+  padding: var(--spacing-small);
+  color: var(--green);
+  background-color: var(--purple);
+  border-radius: var(--radius-lg);
+  font-family: "krona";
+  font-size: 0.8rem;
+}
+
 
 /* responsividade */
 
-@media only screen and (min-width: 300px) and (max-width: 360px) {
+@media only screen and (max-width: 1683px) {
+
+  section,
+  article,
+  footer {
+    margin: 4rem 0;
+  }
 
   nav {
-    display: none;
-  }
-
-  section {
-    height: 100vh;
-    margin: 0 2rem 0.5rem;
-  }
-
-  #olho {
-    width: 90%;
-    top: 20%;
-    left: auto;
-    height: 90%;
-  }
-
-  #faixa {
-    display: none;
-  }
-
-  .welcome_container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 90vh;
-    margin-bottom: 10rem;
-  }
-
-  .welcome_text {
-    bottom: 80%;
-    width: 100%;
-    right: auto;
+    width: 28%;
   }
 
   .line_main {
-    font-size: var(--font-title);
-    display: flex;
-    justify-content: center;
+    font-size: 3.5rem;
   }
 
   .line_emphasis {
-    -webkit-text-stroke: 3px var(--blue);
     font-size: 2.5rem;
-    display: flex;
-    justify-content: center;
   }
 
   .line_description {
-    font-size: var(--font-small);
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  #titulo {
-    -webkit-text-stroke: 2px var(--purple);
-    font-size: 2.5rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem;
-    width: 100%;
-  }
-
-  .about_grid div {
-    border-radius: 10px;
-  }
-
-  .about_grid {
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    gap: 0.5rem;
-  }
-
-  .about_grid h2 {
-    font-size: var(--font-small);
-  }
-
-  .about_grid .about_img img {
-    border-radius: 10px;
-    height: 100%;
-  }
-
-  .about_grid p {
-    margin: 2%;
-    font-size: 0.6rem;
-    letter-spacing: 1px;
-    text-align: justify;
-    text-indent: 2px;
-  }
-
-  .about_grid .about_links img {
-    height: 1.2rem;
-    width: 1.2rem;
-  }
-
-  .about_education img {
-    width: var(--spacing-md);
-    height: var(--spacing-md);
-  }
-
-  .about_education span {
-    font-size: 0.8rem;
-  }
-
-  .about_grid .about_descrition {
-    grid-column: 1/4;
-    grid-row: 1/5;
-  }
-
-  .about_grid .about_img {
-    grid-column: 4/7;
-    grid-row: 1/5;
-    height: 45vh;
-  }
-
-  .about_grid .about_education {
-    grid-column: 1/4;
-    grid-row: 5/6;
-  }
-
-  .about_grid .about_skills {
-    grid-column: 4/7;
-    grid-row: 5/7;
-  }
-
-  .about_grid .about_links {
-    grid-column: 1/4;
-    grid-row: 6/7;
-  }
-
-  .projects_container img {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 360px) and (max-width: 400px) {
-
-  nav {
-    display: none;
-  }
-
-  section {
-    height: 100vh;
-    margin: 0 2rem 0.5rem;
+    font-size: 1rem;
   }
 
   #olho {
-    width: 90%;
-    top: 20%;
-    left: auto;
-    height: 90%;
+    width: 30%;
   }
 
-  #faixa {
-    display: none;
+  #flores {
+    width: 54%;
+    top: 120%;
   }
 
-  .welcome_container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 90vh;
-    margin-bottom: 10rem;
-  }
-
-  .welcome_text {
-    bottom: 80%;
-    width: 100%;
-    right: auto;
-  }
-
-  .line_main{
-    font-size: var(--font-title);
-    display: flex;
-    justify-content: center;
-  }
-
-   .line_emphasis {
-    -webkit-text-stroke: 3px var(--blue);
-    font-size: 2.5rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .line_description {
-    font-size: var(--font-small);
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  #titulo {
-    -webkit-text-stroke: 2px var(--purple);
-    font-size: 2.5rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem;
-    width: 100%;
-  }
-
-  .about_grid div {
-    border-radius: 10px;
-  }
-
-  .about_grid {
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    gap: 0.5rem;
-  }
-
-  .about_grid h2 {
-    font-size: var(--font-small);
-  }
-
-  .about_grid .about_img img {
-    border-radius: 10px;
-    height: 100%;
-  }
-
-  .about_grid p {
-    margin: 2%;
-    font-size: 0.6rem;
-    letter-spacing: 1px;
-    text-align: justify;
-    text-indent: 2px;
-  }
-
-  .about_grid .about_links img {
-    height: 1.2rem;
-    width: 1.2rem;
-  }
-
-
-  .about_education img {
-    width: var(--spacing-md);
-    height: var(--spacing-md);
-  }
-
-  .about_education span {
-    font-size: 0.8rem;
-  }
-
-  .about_grid .about_descrition {
-    grid-column: 1/4;
-    grid-row: 1/5;
-  }
-
-  .about_grid .about_img {
-    grid-column: 4/7;
-    grid-row: 1/5;
-    height: 50vh;
-  }
-
-  .about_grid .about_education {
-    grid-column: 1/4;
-    grid-row: 5/6;
-  }
-
-
-  .about_grid .about_skills {
-    grid-column: 4/7;
-    grid-row: 5/7;
-  }
-
-  .about_grid .about_links {
-    grid-column: 1/4;
-    grid-row: 6/7;
-  }
-
-  .projects_container img {
-    display: none;
+  .about_grid .about_education h4 {
+    width: 28%;
   }
 }
 
-@media only screen and (min-width: 400px) and (max-width: 500px) {
+@media only screen and (max-width: 1483px) {
 
   nav {
-    display: none;
-  }
-
-  section {
-    height: 94vh;
-    margin: 0 2rem 0.5rem;
-  }
-
-  #olho {
-    width: 90%;
-    top: 16%;
-    left: auto;
-    height: 90%;
-  }
-
-  #faixa {
-    display: none;
-  }
-
-  .welcome_container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 5rem;
-  }
-
-  .welcome_text {
-    bottom: 80%;
-    width: 100%;
-    right: auto;
-  }
-
-  .line_main{
-    font-size: var(--font-title);
-    display: flex;
-    justify-content: center;
-  }
-
-  .line_emphasis {
-    -webkit-text-stroke: 3px var(--blue);
-    font-size: 2.5rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .line_description {
-    font-size: var(--font-small);
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  #titulo {
-    -webkit-text-stroke: 2px var(--purple);
-    font-size: 2.5rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem;
-    width: 100%;
-  }
-
-  .about_grid div {
-    border-radius: 10px;
-  }
-
-  .about_grid {
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    gap: 0.5rem;
-  }
-
-  .about_grid h2 {
-    font-size: var(--font-small);
-  }
-
-  .about_grid .about_img img {
-    border-radius: 10px;
-    height: 100%;
-  }
-
-  .about_grid p {
-    margin: 2%;
-    font-size: 0.6rem;
-    letter-spacing: 1px;
-    text-align: justify;
-    text-indent: 2px;
-  }
-
-  .about_grid .about_links img {
-    height: 1.2rem;
-    width: 1.2rem;
-  }
-
-  .about_education img {
-    width: var(--spacing-md);
-    height: var(--spacing-md);
-  }
-
-  .about_education span {
-    font-size: 0.8rem;
-  }
-
-  .about_grid .about_descrition {
-    grid-column: 1/4;
-    grid-row: 1/5;
-  }
-
-  .about_grid .about_img {
-    grid-column: 4/7;
-    grid-row: 1/5;
-    height: 36vh;
-  }
-
-  .about_grid .about_education {
-    grid-column: 1/4;
-    grid-row: 5/6;
-  }
-
-  .about_grid .about_skills {
-    grid-column: 4/7;
-    grid-row: 5/7;
-  }
-
-  .about_grid .about_links {
-    grid-column: 1/4;
-    grid-row: 6/7;
-  }
-
-
-  .projects_container img {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 800px) {
-  nav {
-    display: none;
-  }
-
-  section {
-    height: 90vh;
-    margin: 0 2rem 0.5rem;
-  }
-
-  #olho {
-    width: 90%;
-    top: 25%;
-    left: auto;
-    height: 90%;
-  }
-
-  #faixa {
-    display: none;
-  }
-
-  .welcome_container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 10rem;
-  }
-
-  .welcome_text {
-    bottom: 80%;
-    width: 100%;
-    right: auto;
+    width: 40%;
   }
 
   .line_main {
-    font-size: var(--font-title);
-    display: flex;
-    justify-content: center;
+    font-size: 3rem;
   }
 
-  .line_emphasis{
-    -webkit-text-stroke: 3px var(--blue);
-    font-size: 2.5rem;
-    display: flex;
-    justify-content: center;
+  .line_emphasis {
+    font-size: 2rem;
+    -webkit-text-stroke: 1px var(--blue);
+    margin: 0.5rem 0;
   }
 
   .line_description {
-    font-size: var(--font-small);
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    font-size: 1rem;
   }
 
-  #titulo {
-    -webkit-text-stroke: 2px var(--purple);
-    font-size: 2.5rem;
+  .about_grid .about_education h4 {
+    width: 30%;
   }
 
-  h1 {
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem;
-    width: 100%;
+  #olho {
+    width: 40%;
+    right: 10%;
+    bottom: 5%;
   }
 
-  .about_grid div {
-    border-radius: 10px;
+  #faixa {
+    position: absolute;
+    right: 8rem;
+    z-index: 0;
+    top: 0;
+    width: 12%;
   }
 
-  .about_grid {
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    gap: 0.5rem;
+  #flores {
+    width: 50%;
+    position: absolute;
+    top: 130%;
+    z-index: -1;
   }
 
-  .about_grid h2 {
-    font-size: var(--font-small);
+  .about_grid .about_descrition {
+    grid-column: 1/4;
+    grid-row: 1/2;
   }
 
-  .about_grid .about_img img {
-    border-radius: 10px;
+  .about_grid .about_skill {
+    grid-column: 1/3;
+    grid-row: 2/4;
+  }
+
+  .about_grid .about_img {
+    grid-column: 3/4;
+    grid-row: 2/3;
     height: 100%;
   }
 
-  .about_grid p {
-    margin: 2%;
+  .about_grid .about_img img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about_grid .about_links {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  .about_grid .about_education {
+    grid-column: 1/4;
+    grid-row: 4/5;
+  }
+
+  .about_grid .about_education h4 {
+    width: 14%;
+  }
+
+  .projects_container .grid-project .card-project .category span {
     font-size: 0.7rem;
-    letter-spacing: 2px;
   }
 
-  .about_grid .about_links img {
-    height: 1.5rem;
-    width: 1.5rem;
+  h1 {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
   }
 
-  .about_education img {
-    width: var(--spacing-md);
-    height: var(--spacing-md);
+  #titulo {
+    font-size: 2.8rem;
+    -webkit-text-stroke: 1.5px var(--purple);
   }
 
-  .about_education span {
-    font-size: 0.8rem;
+  .projects_container .grid-project .card-project img {
+    height: 45%;
   }
+}
 
+@media only screen and (max-width: 1023px) {
   .about_grid .about_descrition {
     grid-column: 1/4;
-    grid-row: 1/5;
+    grid-row: 1/2;
+  }
+
+  .about_grid .about_skill {
+    grid-column: 1/3;
+    grid-row: 2/4;
   }
 
   .about_grid .about_img {
-    grid-column: 4/7;
-    grid-row: 1/5;
-    height: 44vh;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    height: auto;
+  }
+
+  .about_grid .about_links {
+    grid-column: 3/4;
+    grid-row: 3/4;
   }
 
   .about_grid .about_education {
     grid-column: 1/4;
-    grid-row: 5/6;
+    grid-row: 4/5;
   }
 
-  .about_grid .about_skills {
-    grid-column: 4/7;
-    grid-row: 5/7;
+  .about_grid .about_education h4 {
+    width: 16%;
   }
 
-  .about_grid .about_links {
-    grid-column: 1/4;
-    grid-row: 6/7;
+  .projects_container .grid-project .card-project .category span {
+    font-size: 0.8rem;
   }
 
-
-  .projects_container img {
-    display: none;
+  h1 {
+    font-size: 1.8rem;
+    margin: 0.5rem;
   }
-}
 
-@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  #titulo {
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1.5px var(--purple);
+  }
+
+  section,
+  article,
+  footer {
+    width: 100%;
+    max-width: 1600px;
+    margin: 3rem auto;
+    padding-inline: 2rem;
+    box-sizing: border-box;
+  }
+
   nav {
-    display: none;
+    width: 50%;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  section {
-    height: 170vh;
-    margin: 0 2rem 0.5rem;
-  }
-
-  #olho {
-    width: 90%;
-    position: absolute;
-    top: 25%;
-    left: auto;
-    height: 90%;
+  nav a {
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
   }
 
   #faixa {
     display: none;
   }
 
+  #flores {
+    top: 123%;
+    width: 100%;
+  }
+
+  #olho {
+    top: 20%;
+    width: 38%;
+    left: auto;
+    right: auto;
+  }
+
   .welcome_container {
+    margin-bottom: 2rem;
+    height: 60vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100vh;
-    margin-bottom: 15rem;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .welcome_text {
-    position: absolute;
-    z-index: 2;
+    bottom: 80%;
+    left: auto;
+    right: auto;
+  }
+
+  .line_main {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .line_emphasis {
+    font-size: 1.2rem;
+    -webkit-text-stroke: 1px var(--blue);
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .line_description {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .about_grid h2 {
+    font-size: 1.5rem;
+  }
+
+  .about_grid p {
+    font-size: var(--font-xs);
+  }
+
+  .projects_container .grid-project .card-project img {
+    height: 56%;
+  }
+
+}
+
+@media only screen and (max-width: 868px) {
+
+  header {
+    top: 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin: 0.5rem;
+  }
+
+  #titulo {
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1.5px var(--purple);
+  }
+
+  section,
+  article,
+  footer {
+    width: 100%;
+    max-width: 1600px;
+    margin: 6rem auto;
+    padding-inline: 2rem;
+    box-sizing: border-box;
+  }
+
+  nav {
+    width: 50%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+  }
+
+  #faixa {
+    display: none;
+  }
+
+  #flores {
+    top: 123%;
+    width: 100%;
+  }
+
+  #olho {
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 28%;
+    left: auto;
+    right: auto;
+  }
+
+  .welcome_container {
+    margin-bottom: 2rem;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .welcome_text {
+    bottom: 80%;
+    left: auto;
+    right: auto;
+  }
+
+  .line_main {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .line_emphasis {
+    font-size: 1.2rem;
+    -webkit-text-stroke: 1px var(--blue);
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .line_description {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .about_grid h2 {
+    font-size: 1.5rem;
+  }
+
+  .about_grid p {
+    font-size: var(--font-xs);
+  }
+
+  .about_grid {
+    height: auto;
+    /* muito importante! */
+    width: 100%;
+    gap: 1rem;
+    box-sizing: border-box;
+  }
+
+  .about_grid div {
+    padding: 0.5rem;
+  }
+
+  .about_grid .about_descrition {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+
+  .about_grid .about_skill {
+    grid-column: 1/3;
+    grid-row: 2/4;
+  }
+
+  .about_grid .about_img {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    height: auto;
+  }
+
+  .about_grid .about_links {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  .about_grid .about_education {
+    grid-column: 1/4;
+    grid-row: 4/5;
+  }
+
+  .about_grid .about_img img {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    display: block;
+    margin: 0 auto;
+  }
+
+  .about_grid .about_links .links h5 {
+    font-size: var(--font-small);
+  }
+
+  .about_grid .about_links .links img {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
+
+  .about_grid .about_skill img {
+    height: 3rem;
+  }
+
+  .about_grid .about_links .links {
+    padding: 0.5rem;
+    gap: 1.5rem;
+    font-size: var(--font-xs);
+  }
+
+  .about_grid .about_education h3 {
+    font-size: var(--font-small);
+  }
+
+  .about_grid .about_education h4 {
+    font-size: var(--font-small);
+    margin-top: 1rem;
+    width: 26%;
+  }
+
+  .contact_container .content_contact {
+    margin: 4rem 0;
+  }
+
+  .contact_container .content_contact p {
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .contact_container .content_contact .title_contact {
+    font-size: 1rem;
+    width: max-content;
+  }
+
+  .contact_container .content_contact button {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .contact_container .content_contact a {
+    font-size: 0.8rem;
+  }
+
+  .projects_container .grid-project .card-project img {
+    height: 48%;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  #olho {
+    width: 50%;
+  }
+
+  .projects_container .grid-project {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .about_grid .about_descrition {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+
+  .about_grid .about_skill {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+
+  .about_grid .about_img {
+    width: 100%;
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+
+  .about_grid {
+    display: grid;
+  }
+
+  .about_grid .about_links {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  .about_grid .about_education {
+    grid-column: 1/4;
+    grid-row: 4/5;
+  }
+
+  .projects_container .grid-project .card-project .category span {
+    font-size: 0.6rem;
+  }
+
+  .projects_container .grid-project .card-project h3 {
+    font-size: 1rem;
+  }
+
+  .projects_container .grid-project .card-project p {
+    font-size: 0.8rem;
+  }
+
+  .projects_container .grid-project .card-project img {
+    height: 68%;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .about_grid {
     display: flex;
     flex-direction: column;
-    bottom: 80%;
-    transform: translateY(20%);
-    width: 100%;
-    right: auto;
   }
 
-  .line_main {
-    font-family: "poet";
-    color: var(--green);
-    font-size: var(--font-title);
-    display: flex;
-    justify-content: center;
+  #olho {
+    width: 56%;
   }
 
-  .line_emphasis {
-    font-family: "krona";
-    color: transparent;
-    -webkit-text-stroke: 3px var(--blue);
-    font-size: 2.5rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .line_description {
-    font-family: "krona";
-    color: var(--white);
-    font-size: var(--font-small);
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  #titulo {
-    font-family: "krona";
-    -webkit-text-stroke: 1.5px var(--purple);
-    color: transparent;
-    font-size: 3rem;
-  }
-
-  h1 {
-    font-size: var(--font-title);
-    font-family: "poet";
-    color: var(--green);
-    margin: 0 0 0.5rem;
-    width: 100%;
-  }
-
-  .about_grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(80px, auto);
-    gap: 0.5rem;
-  }
-
-  .about_grid div {
-    background: linear-gradient(rgba(80, 59, 152, 1), rgba(35, 38, 50, 1));
-    border-radius: 10px;
-    box-shadow: 6px 6px 13px rgba(162, 89, 255, 0.2);
-  }
-
-  .about_grid h2 {
-    font-family: "poet";
-    color: var(--green);
-    text-align: center;
-    font-size: 1.6rem;
-  }
-
-  .about_grid .about_img img {
-    border-radius: 10px;
-    height: 100%;
-  }
-
-  .about_grid p {
-    font-family: "krona";
-    color: var(--white);
-    text-align: justify;
-    margin: 2%;
-    font-size: var(--font-small);
-    letter-spacing: 2px;
-  }
-
-  .about_grid .about_links img {
-    height: 3rem;
-    width: 3rem;
-  }
-
-  .about_education img {
-    width: var(--spacing-md);
-    height: var(--spacing-md);
-  }
-
-  .about_education span {
-    font-size: 1.5rem;
-  }
-
-  .about_grid .about_descrition {
-    grid-column: 1/4;
-    grid-row: 1/5;
-  }
-
-  .about_grid .about_img {
-    grid-column: 4/7;
-    grid-row: 1/5;
-    height: 64vh;
-  }
-
-  .about_grid .about_education {
-    grid-column: 1/4;
-    grid-row: 5/6;
-  }
-
-  .about_grid .about_skills {
-    grid-column: 4/7;
-    grid-row: 5/7;
-  }
-
-  .about_grid .about_links {
-    grid-column: 1/4;
-    grid-row: 6/7;
-  }
-
-  .projects_container img {
-    display: none;
+  nav {
+    width: 70%;
   }
 }
 
-/* 1920px pra cima */
-@media screen and (min-width: 1900px) {
-
-  /*principal*/
-
-  section {
-    height: 130vh;
-    margin: 0 5.5rem 2rem;
+@media only screen and (max-width: 468px) {
+  #flores {
+    top: 123%;
+    width: 100%;
   }
 
-  /*home*/
-  nav {
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 5%;
-    font-family: "krona";
-    color: var(--white);
-    width: 30%;
-    border-radius: 2rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(35, 38, 50, 0.2));
-    height: 4rem;
-    align-items: center;
-    backdrop-filter: blur(4px);
-  }
-
-  .line_main {
-    font-family: "poet";
-    color: var(--green);
-    font-size: 4rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .line_emphasis {
-    font-family: "krona";
-    color: transparent;
-    -webkit-text-stroke: 4px var(--blue);
-    font-size: 4rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .line_description {
-    font-family: "krona";
-    color: var(--white);
-    font-size: var(--font-title);
-    display: flex;
-    justify-content: center;
-  }
-
-  /*grid*/
-
-  #titulo {
-    font-family: "krona";
-    -webkit-text-stroke: 3px var(--purple);
-    color: transparent;
-    font-size: 5rem;
+  section,
+  article,
+  footer {
+    margin: 3rem auto;
+    padding-inline: 1rem;
   }
 
   h1 {
-    font-size: 3rem;
-    font-family: "poet";
-    color: var(--green);
+    font-size: 1.5rem;
+    margin: 0.5rem;
   }
 
-  .about_grid {
-    display: grid;
-    max-width: 100vw;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(150px, auto);
-    gap: var(--spacing-md);
+  #titulo {
+    font-size: 2rem;
+    -webkit-text-stroke: 1px var(--purple);
   }
 
   .about_grid h2 {
-    font-family: "poet";
-    color: var(--green);
-    text-align: center;
-    font-size: 2.5rem;
+    font-size: 1rem;
   }
 
   .about_grid p {
-    font-family: "krona";
-    color: var(--white);
-    text-align: justify;
-    margin: 4%;
-    font-size: 1.4rem;
-    letter-spacing: 2.5px;
+    font-size: 0.6rem;
   }
 
-  .about_grid .about_img {
-    grid-column: 4/7;
-    grid-row: 1/5;
-    height: 50rem;
+  nav {
+    width: 80%;
   }
 
-  .about_grid .about_links img {
-    height: 4rem;
-    width: 4rem;
+  nav a {
+    font-size: 0.6rem;
   }
 
-  .about_education img {
-    width: 3rem;
+  .projects_container .grid-project {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .projects_container .grid-project .card-project .category span {
+    font-size: 0.6rem;
+  }
+
+  .projects_container .grid-project .card-project h3 {
+    font-size: 1rem;
+  }
+
+  .projects_container .grid-project .card-project p {
+    font-size: 0.8rem;
+  }
+
+  .line_main {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .line_emphasis {
+    font-size: 1rem;
+    -webkit-text-stroke: 0.5px var(--blue);
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .line_description {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  #olho {
+    width: 74%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 28%;
+    left: auto;
+    right: auto;
+  }
+
+  .about_grid .about_links .links h5 {
+    font-size: 0.8rem;
+  }
+
+  .about_grid .about_links .links img {
     height: 3rem;
+    width: 3rem;
   }
 
-  .about_education span {
-    font-size: var(--font-title);
+  .about_grid .about_education h3 {
+    font-size: 0.8rem;
   }
 
-  /*projects*/
-
-  .projects_container .project_unit {
-    padding: 4rem 0;
-    border-bottom: 4px solid #784ef4;
+  .about_grid .about_education h4 {
+    font-size: 0.9rem;
+    width: 30%;
   }
 
-  .projects_container img {
-    height: 22rem;
-    width: 32rem;
-    position: absolute;
-    right: 2rem;
-    bottom: 18rem;
+  .contact_container .content_contact {
+    margin: 4rem 0;
   }
+
+  .contact_container .content_contact p {
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .contact_container .content_contact .title_contact {
+    font-size: 1rem;
+    width: max-content;
+  }
+
+  .contact_container .content_contact button {
+    padding: 0.8rem;
+  }
+
+  .contact_container .content_contact a {
+    font-size: 0.8rem;
+  }
+
 }
