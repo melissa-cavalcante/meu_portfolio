@@ -29,20 +29,34 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
-function openModal(id) {
-      document.getElementById(id).style.display = 'block';
-    }
 
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
+// Fechar o modal ao clicar fora
+window.onclick = function (event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
     }
+  });
+}
 
-    // Fechar o modal ao clicar fora
-    window.onclick = function (event) {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
-    }
+function openModal(modalId) {
+  // Fecha todos os modais primeiro
+  const modais = document.querySelectorAll('.modal');
+  modais.forEach(modal => {
+    modal.style.display = 'none';
+  });
+
+  // Abre apenas o modal solicitado
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
