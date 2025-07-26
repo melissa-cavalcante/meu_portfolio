@@ -1,0 +1,14 @@
+@media only screen and (max-width:668px) {
+  .about_grid {
+    display: flex;
+    flex-direction: column
+  }
+
+  #olho {
+    width: 56%
+  }
+
+  nav {
+    width: 70%
+  }
+}

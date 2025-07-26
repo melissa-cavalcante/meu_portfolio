@@ -1,0 +1,332 @@
+@media only screen and (max-width:1023px) {
+    .about_grid .about_descrition {
+        grid-column: 1/4;
+        grid-row: 1/2
+    }
+
+    .about_grid .about_skill {
+        grid-column: 1/3;
+        grid-row: 2/4
+    }
+
+    .about_grid .about_img {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        height: auto
+    }
+
+    .about_grid .about_links {
+        grid-column: 3/4;
+        grid-row: 3/4
+    }
+
+    .about_grid .about_education {
+        grid-column: 1/4;
+        grid-row: 4/5
+    }
+
+    .about_grid .about_education h4 {
+        width: 16%
+    }
+
+    .projects_container .grid-project .card-project .category span {
+        font-size: 0.8rem
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin: 0.5rem
+    }
+
+    #titulo {
+        font-size: 2.5rem;
+        -webkit-text-stroke: 1.5px var(--purple)
+    }
+
+    section,
+    article,
+    footer {
+        width: 100%;
+        max-width: 1600px;
+        margin: 3rem auto;
+        padding-inline: 2rem;
+        box-sizing: border-box
+    }
+
+    nav {
+        width: 50%;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        margin: 0 0.5rem
+    }
+
+    #faixa {
+        display: none
+    }
+
+    #flores {
+        top: 123%;
+        width: 100%
+    }
+
+    #olho {
+        top: 20%;
+        width: 38%;
+        left: auto;
+        right: auto
+    }
+
+    .welcome_container {
+        margin-bottom: 2rem;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box
+    }
+
+    .welcome_text {
+        bottom: 80%;
+        left: auto;
+        right: auto
+    }
+
+    .line_main {
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        margin: 0
+    }
+
+    .line_emphasis {
+        font-size: 1.2rem;
+        -webkit-text-stroke: 1px var(--blue);
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem 0
+    }
+
+    .line_description {
+        font-size: 1rem;
+        margin: 0
+    }
+
+    .about_grid h2 {
+        font-size: 1.5rem
+    }
+
+    .about_grid p {
+        font-size: var(--font-xs)
+    }
+
+}
+
+@media only screen and (max-width:868px) {
+    header {
+        top: 0
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin: 0.5rem
+    }
+
+    #titulo {
+        font-size: 2.5rem;
+        -webkit-text-stroke: 1.5px var(--purple)
+    }
+
+    section,
+    article,
+    footer {
+        width: 100%;
+        max-width: 1600px;
+        margin: 6rem auto;
+        padding-inline: 2rem;
+        box-sizing: border-box
+    }
+
+    nav {
+        width: 50%;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        margin: 0 0.5rem
+    }
+
+    #faixa {
+        display: none
+    }
+
+    #flores {
+        top: 123%;
+        width: 100%
+    }
+
+    #olho {
+        width: 50%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 28%;
+        left: auto;
+        right: auto
+    }
+
+    .welcome_container {
+        margin-bottom: 2rem;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box
+    }
+
+    .welcome_text {
+        bottom: 80%;
+        left: auto;
+        right: auto
+    }
+
+    .line_main {
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        margin: 0
+    }
+
+    .line_emphasis {
+        font-size: 1.2rem;
+        -webkit-text-stroke: 1px var(--blue);
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem 0
+    }
+
+    .line_description {
+        font-size: 1rem;
+        margin: 0
+    }
+
+    .about_grid h2 {
+        font-size: 1.5rem
+    }
+
+    .about_grid p {
+        font-size: var(--font-xs)
+    }
+
+    .about_grid {
+        height: auto;
+        width: 100%;
+        gap: 1rem;
+        box-sizing: border-box
+    }
+
+    .about_grid div {
+        padding: 0.5rem
+    }
+
+    .about_grid .about_descrition {
+        grid-column: 1/4;
+        grid-row: 1/2
+    }
+
+    .about_grid .about_skill {
+        grid-column: 1/3;
+        grid-row: 2/4
+    }
+
+    .about_grid .about_img {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        height: auto
+    }
+
+    .about_grid .about_links {
+        grid-column: 3/4;
+        grid-row: 3/4
+    }
+
+    .about_grid .about_education {
+        grid-column: 1/4;
+        grid-row: 4/5
+    }
+
+    .about_grid .about_img img {
+        height: 100%;
+        width: 100%;
+        border-radius: var(--radius-lg);
+        display: block;
+        margin: 0 auto
+    }
+
+    .about_grid .about_links .links h3 {
+        font-size: var(--font-small)
+    }
+
+    .about_grid .about_links .links img {
+        height: 3.8rem;
+        width: 3.8rem
+    }
+
+    .about_grid .about_skill img {
+        height: 3rem
+    }
+
+    .about_grid .about_links .links {
+        padding: 0.5rem;
+        gap: 1.5rem;
+        font-size: var(--font-xs)
+    }
+
+    .about_grid .about_education h3 {
+        font-size: var(--font-small)
+    }
+
+    .about_grid .about_education h4 {
+        font-size: var(--font-small);
+        margin-top: 1rem;
+        width: 26%
+    }
+
+    .contact_container .content_contact {
+        margin: 4rem 0
+    }
+
+    .contact_container .content_contact p {
+        font-size: 0.8rem;
+        text-align: center;
+        margin: 1rem
+    }
+
+    .contact_container .content_contact .title_contact {
+        font-size: 1rem;
+        width: max-content
+    }
+
+    .contact_container .content_contact button {
+        margin-top: 1rem;
+        padding: 1rem
+    }
+
+    .contact_container .content_contact a {
+        font-size: 0.8rem
+    }
+}

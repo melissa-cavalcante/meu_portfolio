@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
   <meta name="description"
     content="Olá! Me chamo Melissa, sou desenvolvedora web & designer. Veja meus projetos, venha me conhecer!">
-  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/media-max-1683.css" />
+  <link rel="stylesheet" href="./css/media-max-1483.css" />
+  <link rel="stylesheet" href="./css/media-max-1023.css" />
+  <link rel="stylesheet" href="./css/media-max-768.css" />
+  <link rel="stylesheet" href="./css/media-max-668.css" />
+  <link rel="stylesheet" href="./css/media-max-468.css" />
   <script src="script.js" defer></script>
   <title>Meu Portfólio</title>
 </head>
@@ -131,18 +137,18 @@
   <article class="projects_container" id="projetos">
     <h1><span id="titulo">02.</span>Projetos</h1>
     <div class="grid-project">
-      <div class="card-project" onclick="openModal('modalSpectrum')">
+      <div class="card-project" onclick="openModal('modalBibliowl')">
         <figure>
           <img src="https://melissa-cavalcante.github.io/meu_portfolio/assets/img/projetos/spectrum.jpg"
-            alt="imagem do projeto Spectrum">
+            alt="imagem do projeto Bibliowl">
         </figure>
         <div class="category">
           <span>Web design</span>
           <span>UX/UI</span>
           <span>Front-end</span>
         </div>
-        <h2>Spectrum - 2025</h2>
-        <p>Uma empresa fictícia desenvolvida para apresentarmos o projeto da faculdade.</p>
+        <h2>Bibliowl - 2025</h2>
+        <p>Uma landing page desenvolvida para apresentarmos nosso projeto BibliOwl.</p>
       </div>
       <div class="card-project" onclick="openModal('modalAvatar')">
         <figure>
@@ -186,22 +192,25 @@
     </div>
     </div>
 
-    <div id="modalSpectrum" class="modal">
+    <div id="modalBibliowl" class="modal">
       <div class="modal-content">
-        <button class="close" onclick="closeModal('modalSpectrum')" aria-label="Fechar modal">×</button>
+        <button class="close" onclick="closeModal('modalBibliowl')" aria-label="Fechar modal">×</button>
         <img src="assets/img/projetos/spectrum-desktop.png" alt="Imagem do projeto Spectrum">
         <div class="modal-text">
-          <h2>Spectrum</h2>
+          <h2>BibliOwl</h2>
           <p>
-            A landing page foi criada com HTML, CSS e JavaScript, usando técnicas responsivas e semânticas para oferecer
-            uma boa experiência em diversos dispositivos. O projeto é uma empresa fictícia desenvolvida para aplicar os
-            conhecimentos do curso.
+            A landing page foi criada com HTML, CSS e JavaScript, utilizando práticas responsivas e semânticas para
+            garantir uma boa experiência em diferentes dispositivos. O projeto apresenta uma plataforma desenvolvida
+            para facilitar o trabalho dos bibliotecários, tornando os processos mais práticos e organizados.
           </p>
+
           <p>
-            O nome da empresa foi inspirado no espectro de cores de Newton, representando diversidade, inovação e
-            tecnologia. A identidade visual usa cores vibrantes e elementos modernos para destacar os serviços e
-            diferenciais de forma clara e atrativa.
+            A proposta do sistema é centralizar todas as operações de empréstimo e devolução de livros em um único
+            ambiente digital, eliminando a necessidade de registros manuais e minimizando erros operacionais. Com uma
+            interface intuitiva e funcional, a plataforma permite que os usuários acessem facilmente as principais
+            funcionalidades, otimizando o tempo dos profissionais e melhorando o atendimento ao público.
           </p>
+
           <div class="badges">
             <span class="badge">HTML</span>
             <span class="badge">CSS</span>
@@ -212,9 +221,9 @@
     </div>
 
     <div id="modalAvatar" class="modal">
-      <div class="modal-content">
+      <div class="modal-content-horizontal">
         <button class="close" onclick="closeModal('modalSpectrum')" aria-label="Fechar modal">×</button>
-        <img src="assets/img/projetos/avatar.jpg" alt="Imagem do projeto Avatar" class="avatar">
+        <img src="assets/img/projetos/cover.png" alt="Imagem do projeto Avatar" class="avatar">
         <div class="modal-text">
           <h2>Avatar</h2>
           <p>
@@ -230,20 +239,48 @@
     </div>
 
     <div id="modalGame_review" class="modal">
-      <div class="modal-content">
+      <div class="modal-content-horizontal">
         <button class="close" onclick="closeModal('modalSpectrum')" aria-label="Fechar modal">×</button>
-        <h2>Avatar</h2>
-        <p>Descrição completa do projeto Avatar.</p>
-        <img src="assets/img/projetos/avatar.jpg" alt="imagem do projeto Avatar">
+        <div class="modal-img">
+          <img src="assets/img/projetos/game_inicio.jpg" alt="Imagem do projeto Game Review" class="avatar">
+          <img src="assets/img/projetos/game_login.png" alt="Imagem do projeto Game Review" class="avatar">
+        </div>
+        <div class="modal-text">
+          <h2>Game Review</h2>
+          <p>
+            O Game Review foi desenvolvido como parte de um estudo de caso, com o objetivo de simular uma plataforma
+            voltada para a publicação de análises e opiniões sobre jogos. A ideia é oferecer um espaço onde os usuários
+            possam compartilhar reviews, avaliar títulos e trocar experiências, contribuindo para a comunidade gamer de
+            forma colaborativa.
+          </p>
+          <div class="badges">
+            <span class="badge">Figma</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="modalGetto" class="modal">
-      <div class="modal-content">
-        <button class="close" onclick="closeModal('modalSpectrum')" aria-label="Fechar modal">×</button>
-        <h2>Avatar</h2>
-        <p>Descrição completa do projeto Avatar.</p>
-        <img src="assets/img/projetos/avatar.jpg" alt="imagem do projeto Avatar">
+      <div class="modal-content-horizontal">
+        <button class="close" onclick="closeModal('modalGetto')" aria-label="Fechar modal">×</button>
+        <div class="modal-img">
+          <img src="assets/img/projetos/getto_cadastro.jpg" alt="Imagem do projeto Game Review" class="avatar">
+          <img src="assets/img/projetos/getto_feed.jpg" alt="Imagem do projeto Game Review" class="avatar">
+          <img src="assets/img/projetos/getto_login.jpg" alt="Imagem do projeto Game Review" class="avatar">
+          <img src="assets/img/projetos/getto_perfil.png" alt="Imagem do projeto Game Review" class="avatar">
+        </div>
+        <div class="modal-text">
+          <h2>Getto</h2>
+          <p>
+            O Game Review foi desenvolvido como parte de um estudo de caso, com o objetivo de simular uma plataforma
+            voltada para a publicação de análises e opiniões sobre jogos. A ideia é oferecer um espaço onde os usuários
+            possam compartilhar reviews, avaliar títulos e trocar experiências, contribuindo para a comunidade gamer de
+            forma colaborativa.
+          </p>
+          <div class="badges">
+            <span class="badge">Figma</span>
+          </div>
+        </div>
       </div>
     </div>
 

@@ -1,0 +1,36 @@
+@media only screen and (max-width:1683px) {
+    section,
+    article,
+    footer {
+        margin: 4rem 0
+    }
+
+    nav {
+        width: 28%
+    }
+
+    .line_main {
+        font-size: 3.5rem
+    }
+
+    .line_emphasis {
+        font-size: 2.5rem
+    }
+
+    .line_description {
+        font-size: 1rem
+    }
+
+    #olho {
+        width: 30%
+    }
+
+    #flores {
+        width: 54%;
+        top: 120%
+    }
+
+    .about_grid .about_education h4 {
+        width: 28%
+    }
+}

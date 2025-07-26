@@ -1,0 +1,93 @@
+@media only screen and (max-width:1483px) {
+    nav {
+        width: 40%
+    }
+
+    .line_main {
+        font-size: 3rem
+    }
+
+    .line_emphasis {
+        font-size: 2rem;
+        -webkit-text-stroke: 1px var(--blue);
+        margin: 0.5rem 0
+    }
+
+    .line_description {
+        font-size: 1rem
+    }
+
+    .about_grid .about_education h4 {
+        width: 30%
+    }
+
+    #olho {
+        width: 40%;
+        right: 10%;
+        bottom: 5%
+    }
+
+    #faixa {
+        position: absolute;
+        right: 8rem;
+        z-index: 0;
+        top: 0;
+        width: 12%
+    }
+
+    #flores {
+        width: 50%;
+        position: absolute;
+        top: 130%;
+        z-index: -1
+    }
+
+    .about_grid .about_descrition {
+        grid-column: 1/4;
+        grid-row: 1/2
+    }
+
+    .about_grid .about_skill {
+        grid-column: 1/3;
+        grid-row: 2/4
+    }
+
+    .about_grid .about_img {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        height: 100%
+    }
+
+    .about_grid .about_img img {
+        display: flex;
+        justify-content: center
+    }
+
+    .about_grid .about_links {
+        grid-column: 3/4;
+        grid-row: 3/4
+    }
+
+    .about_grid .about_education {
+        grid-column: 1/4;
+        grid-row: 4/5
+    }
+
+    .about_grid .about_education h4 {
+        width: 14%
+    }
+
+    .projects_container .grid-project .card-project .category span {
+        font-size: 0.7rem
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin: 0.5rem 0
+    }
+
+    #titulo {
+        font-size: 2.8rem;
+        -webkit-text-stroke: 1.5px var(--purple)
+    }
+}

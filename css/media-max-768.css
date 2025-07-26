@@ -1,0 +1,77 @@
+@media only screen and (max-width:768px) {
+    .projects_container .grid-project .card-project figure {
+        height: 60%;
+    }
+
+    #olho {
+        width: 50%
+    }
+
+    .projects_container .grid-project {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem
+    }
+
+    .about_grid .about_descrition {
+        grid-column: 1/4;
+        grid-row: 1/2
+    }
+
+    .about_grid .about_skill {
+        grid-column: 1/4;
+        grid-row: 2/3
+    }
+
+    .about_grid .about_img {
+        width: 100%;
+        grid-column: 1/3;
+        grid-row: 3/4
+    }
+
+    .about_grid {
+        display: grid
+    }
+
+    .about_grid .about_links {
+        grid-column: 3/4;
+        grid-row: 3/4
+    }
+
+    .about_grid .about_education {
+        grid-column: 1/4;
+        grid-row: 4/5
+    }
+
+    .projects_container .grid-project .card-project .category span {
+        font-size: 0.6rem
+    }
+
+    .projects_container .grid-project .card-project h3 {
+        font-size: 1rem
+    }
+
+    .projects_container .grid-project .card-project p {
+        font-size: 0.8rem
+    }
+
+    .modal-content {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .modal-content img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .modal-text {
+        align-items: center;
+        text-align: justify;
+    }
+
+    .close {
+        top: 1rem;
+        right: 1rem;
+    }
+}
