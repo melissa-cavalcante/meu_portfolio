@@ -137,7 +137,7 @@
   <article class="projects_container" id="projetos">
     <h1><span id="titulo">02.</span>Projetos</h1>
     <div class="grid-project">
-      <div class="card-project" onclick="openModal('modalBibliowl')">
+      <div class="card-project" data-open-modal="bibliowl">
         <figure>
           <img src="https://melissa-cavalcante.github.io/meu_portfolio/assets/img/projetos/spectrum.jpg"
             alt="imagem do projeto Bibliowl">
@@ -150,7 +150,7 @@
         <h2>Bibliowl - 2025</h2>
         <p>Uma landing page desenvolvida para apresentarmos nosso projeto BibliOwl.</p>
       </div>
-      <div class="card-project" onclick="openModal('modalAvatar')">
+      <div class="card-project" data-open-modal="avatar">
         <figure>
           <img src="https://melissa-cavalcante.github.io/meu_portfolio/assets/img/projetos/avatar.jpg"
             alt="ilustração avatar">
@@ -163,9 +163,9 @@
         <p>Ilustração digital desenvolvida no Figma, representando uma pessoa real com estilo próprio e foco visual.</p>
       </div>
 
-      <div class="card-project" onclick="openModal('modalGame_review')">
+      <div class="card-project" data-open-modal="game-review">
         <figure>
-          <img src="https://melissa-cavalcante.github.io/meu_portfolio/assets/img/projetos/game_review.jpg"
+          <img src="https://melissa-cavalcante.github.io/meu_portfolio/assets/img/projetos/game_inicio.jpg"
             alt="imagem do projeto Game Review">
         </figure>
         <div class="category">
@@ -176,7 +176,7 @@
         <p>Uma plataforma criada para escrever e compartilhar reviews de jogos</p>
       </div>
 
-      <div class="card-project" onclick="openModal('modalGetto')">
+      <div class="card-project" data-open-modal="getto">
         <figure>
           <img src="https://melissa-cavalcante.github.io/meu_portfolio/assets/img/projetos/getto.jpg"
             alt="imagem do projeto Getto">
@@ -192,94 +192,80 @@
     </div>
     </div>
 
-    <div id="modalBibliowl" class="modal">
-      <div class="modal-content">
-        <button class="close" onclick="closeModal('modalBibliowl')" aria-label="Fechar modal">×</button>
-        <img src="assets/img/projetos/spectrum-desktop.png" alt="Imagem do projeto Spectrum">
-        <div class="modal-text">
-          <h2>BibliOwl</h2>
-          <p>
-            A landing page foi criada com HTML, CSS e JavaScript, utilizando práticas responsivas e semânticas para
-            garantir uma boa experiência em diferentes dispositivos. O projeto apresenta uma plataforma desenvolvida
-            para facilitar o trabalho dos bibliotecários, tornando os processos mais práticos e organizados.
-          </p>
+    <div id="fade" class="hide"></div>
+    <div data-modal="bibliowl" class="modal hide">
+      <div class="modal-header">
+        <h2>BibliOwl</h2>
+        <button class="close-modal">x</button>
+      </div>
+      <div class="modal-body">
+        <img src="https://melissa-cavalcante.github.io/meu_portfolio/assets/img/projetos/spectrum-desktop.png"
+          alt="imagem do projeto BibliOwl">
 
-          <p>
-            A proposta do sistema é centralizar todas as operações de empréstimo e devolução de livros em um único
+        <div class="modal-text">
+          <p>A landing page foi criada com HTML, CSS e JavaScript, utilizando práticas responsivas e semânticas para
+            garantir uma boa experiência em diferentes dispositivos. O projeto apresenta uma plataforma desenvolvida
+            para facilitar o trabalho dos bibliotecários, tornando os processos mais práticos e organizados.</p>
+          <p> A proposta do sistema é centralizar todas as operações de empréstimo e devolução de livros em um único
             ambiente digital, eliminando a necessidade de registros manuais e minimizando erros operacionais. Com uma
             interface intuitiva e funcional, a plataforma permite que os usuários acessem facilmente as principais
-            funcionalidades, otimizando o tempo dos profissionais e melhorando o atendimento ao público.
-          </p>
-
-          <div class="badges">
-            <span class="badge">HTML</span>
-            <span class="badge">CSS</span>
-            <span class="badge">JavaScript</span>
-          </div>
+            funcionalidades, otimizando o tempo dos profissionais e melhorando o atendimento ao público.</p>
         </div>
       </div>
     </div>
 
-    <div id="modalAvatar" class="modal">
-      <div class="modal-content-horizontal">
-        <button class="close" onclick="closeModal('modalSpectrum')" aria-label="Fechar modal">×</button>
-        <img src="assets/img/projetos/cover.png" alt="Imagem do projeto Avatar" class="avatar">
+    <div data-modal="avatar" class="modal hide">
+      <div class="modal-header">
+        <h2>Avatar</h2>
+        <button class="close-modal">x</button>
+      </div>
+      <div class="modal-body">
+        <img src="https://melissa-cavalcante.github.io/meu_portfolio/assets/img/projetos/cover.png"
+          alt="imagem do projeto Getto">
+
         <div class="modal-text">
-          <h2>Avatar</h2>
-          <p>
-            O avatar foi criado para o cliente fortalecer sua identidade visual no LinkedIn e GitHub, tornando seu
+          <p>O avatar foi criado para o cliente fortalecer sua identidade visual no LinkedIn e GitHub, tornando seu
             perfil mais reconhecível e alinhado à sua área. O design reflete sua personalidade e valores, transmitindo
             profissionalismo e destacando-o em um mercado competitivo.
           </p>
-          <div class="badges">
-            <span class="badge">Figma</span>
-          </div>
         </div>
       </div>
     </div>
 
-    <div id="modalGame_review" class="modal">
-      <div class="modal-content-horizontal">
-        <button class="close" onclick="closeModal('modalSpectrum')" aria-label="Fechar modal">×</button>
-        <div class="modal-img">
-          <img src="assets/img/projetos/game_inicio.jpg" alt="Imagem do projeto Game Review" class="avatar">
-          <img src="assets/img/projetos/game_login.png" alt="Imagem do projeto Game Review" class="avatar">
-        </div>
+    <div data-modal="game-review" class="modal hide">
+      <div class="modal-header">
+        <h2>Game Review</h2>
+        <button class="close-modal">x</button>
+      </div>
+      <div class="modal-body">
+        <img src="https://melissa-cavalcante.github.io/meu_portfolio/assets/img/projetos/game_inicio.jpg"
+          alt="imagem do projeto Game Review">
+
         <div class="modal-text">
-          <h2>Game Review</h2>
-          <p>
-            O Game Review foi desenvolvido como parte de um estudo de caso, com o objetivo de simular uma plataforma
+          <p>O Game Review foi desenvolvido como parte de um estudo de caso, com o objetivo de simular uma plataforma
             voltada para a publicação de análises e opiniões sobre jogos. A ideia é oferecer um espaço onde os usuários
             possam compartilhar reviews, avaliar títulos e trocar experiências, contribuindo para a comunidade gamer de
-            forma colaborativa.
-          </p>
-          <div class="badges">
-            <span class="badge">Figma</span>
-          </div>
+            forma colaborativa.</p>
+
         </div>
       </div>
     </div>
 
-    <div id="modalGetto" class="modal">
-      <div class="modal-content-horizontal">
-        <button class="close" onclick="closeModal('modalGetto')" aria-label="Fechar modal">×</button>
-        <div class="modal-img">
-          <img src="assets/img/projetos/getto_cadastro.jpg" alt="Imagem do projeto Game Review" class="avatar">
-          <img src="assets/img/projetos/getto_feed.jpg" alt="Imagem do projeto Game Review" class="avatar">
-          <img src="assets/img/projetos/getto_login.jpg" alt="Imagem do projeto Game Review" class="avatar">
-          <img src="assets/img/projetos/getto_perfil.png" alt="Imagem do projeto Game Review" class="avatar">
-        </div>
+    <div data-modal="getto" class="modal hide">
+      <div class="modal-header">
+        <h2>Getto</h2>
+        <button class="close-modal">x</button>
+      </div>
+      <div class="modal-body">
+        <img src="https://melissa-cavalcante.github.io/meu_portfolio/assets/img/projetos/getto_feed.jpg"
+          alt="imagem do projeto Game Review">
+
         <div class="modal-text">
-          <h2>Getto</h2>
-          <p>
-            O Game Review foi desenvolvido como parte de um estudo de caso, com o objetivo de simular uma plataforma
+          <p>O Game Review foi desenvolvido como parte de um estudo de caso, com o objetivo de simular uma plataforma
             voltada para a publicação de análises e opiniões sobre jogos. A ideia é oferecer um espaço onde os usuários
             possam compartilhar reviews, avaliar títulos e trocar experiências, contribuindo para a comunidade gamer de
-            forma colaborativa.
-          </p>
-          <div class="badges">
-            <span class="badge">Figma</span>
-          </div>
+            forma colaborativa.</p>
+
         </div>
       </div>
     </div>

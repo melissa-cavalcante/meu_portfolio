@@ -1,21 +1,19 @@
 const sections = document.querySelectorAll('#home, #sobre, #projetos, #contato');
-const navLinks = document.querySelectorAll('nav ul li a'); // links do menu
+const navLinks = document.querySelectorAll('nav ul li a');
 
 const options = {
   root: null,
-  threshold: 0.10 // quando 60% da seção está visível
+  threshold: 0.10
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Remove a classe ativa de todos os links
       navLinks.forEach(link => {
         link.classList.remove('change-color');
       });
 
-      // Adiciona a classe ativa ao link correspondente à seção visível
-      const id = entry.target.getAttribute('id'); // pega o id da seção
+      const id = entry.target.getAttribute('id');
       const activeLink = document.querySelector(`nav a[href="#${id}"]`);
       if (activeLink) {
         activeLink.classList.add('change-color');
@@ -24,39 +22,45 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, options);
 
-// Observar todas as seções
 sections.forEach(section => {
   observer.observe(section);
 });
 
+window.addEventListener("DOMContentLoaded", function () {
+  const fade = document.querySelector("#fade");
 
-// Fechar o modal ao clicar fora
-window.onclick = function (event) {
-  const modals = document.querySelectorAll('.modal');
-  modals.forEach(modal => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-}
+  // Pega todos os botões que abrem modais
+  const openButtons = document.querySelectorAll("[data-open-modal]");
 
-function openModal(modalId) {
-  // Fecha todos os modais primeiro
-  const modais = document.querySelectorAll('.modal');
-  modais.forEach(modal => {
-    modal.style.display = 'none';
+  // Adiciona evento para cada botão de abrir modal
+  openButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modalName = button.getAttribute("data-open-modal"); // Pega o nome do modal
+      const modal = document.querySelector(`[data-modal="${modalName}"]`);
+      toggleModal(modal);
+    });
   });
 
-  // Abre apenas o modal solicitado
-  const modal = document.getElementById(modalId);
-  if (modal) {
-    modal.style.display = 'flex';
-  }
-}
+  // Pega todos os botões de fechar modal
+  const closeButtons = document.querySelectorAll(".close-modal");
 
-function closeModal(modalId) {
-  const modal = document.getElementById(modalId);
-  if (modal) {
-    modal.style.display = 'none';
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.closest(".modal"); // Encontra o modal pai
+      toggleModal(modal);
+    });
+  });
+
+  // Fecha o modal clicando no fundo escuro
+  fade.addEventListener("click", () => {
+    document.querySelectorAll(".modal:not(.hide)").forEach((modal) => {
+      toggleModal(modal);
+    });
+  });
+
+  // Função que abre ou fecha o modal recebido
+  function toggleModal(modal) {
+    modal.classList.toggle("hide");
+    fade.classList.toggle("hide");
   }
-}
+});
