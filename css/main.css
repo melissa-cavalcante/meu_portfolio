@@ -590,3 +590,33 @@ h1 {
   font-size: 0.8rem;
   user-select: none;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--black);
+}
+
+/* Define a cor do "thumb" (alça de rolagem) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--purple);
+  border-radius: 6px;
+}
+
+/* Define a cor do "thumb" quando em hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6836ff;
+}
+/* Define a cor de fundo da trilha (track) da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #3f3f3f;
+}
+
+/* Define a aparência do canto da barra de rolagem (opcional) */
+::-webkit-scrollbar-corner {
+  background: #3f3f3f;
+}
+
+/* Define a aparência dos botões de rolagem (opcional) */
+::-webkit-scrollbar-button {
+  background: #555;
+}
