@@ -64,3 +64,50 @@ window.addEventListener("DOMContentLoaded", function () {
     fade.classList.toggle("hide");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modals = document.querySelectorAll(".modal.slider");
+
+  modals.forEach((modal) => {
+    const sliderItems = modal.querySelectorAll(".slider");
+    const btnPrev = modal.querySelector(".prev-button");
+    const btnNext = modal.querySelector(".next-button");
+
+    let currentSlide = 0;
+
+    function hideSlider() {
+      sliderItems.forEach((item) => item.classList.remove("on"));
+    }
+
+    function showSlider() {
+      sliderItems[currentSlide].classList.add("on");
+    }
+
+    function nextSlider() {
+      hideSlider();
+      if (currentSlide === sliderItems.length - 1) {
+        currentSlide = 0;
+      } else {
+        currentSlide++;
+      }
+      showSlider();
+    }
+
+    function prevSlider() {
+      hideSlider();
+      if (currentSlide === 0) {
+        currentSlide = sliderItems.length - 1;
+      } else {
+        currentSlide--;
+      }
+      showSlider();
+    }
+
+    // Exibe o primeiro slide quando o modal for aberto
+    showSlider();
+
+    // Adiciona os eventos aos botões de navegação
+    btnNext.addEventListener("click", nextSlider);
+    btnPrev.addEventListener("click", prevSlider);
+  });
+});

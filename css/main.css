@@ -68,7 +68,7 @@ a.change-color {
 
 .modal,
 #fade {
-  transition: 0.5s;
+  transition: all 0.4s ease;
   opacity: 1;
   pointer-events: all;
 }
@@ -80,7 +80,7 @@ a.change-color {
 }
 
 .modal.hide {
-  top: 0  ;
+  top: 0;
 }
 
 .modal {
@@ -94,22 +94,126 @@ a.change-color {
   max-width: 90%;
   padding: 1.2rem;
   border-radius: var(--radius-lg);
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-.modal-header {
+.modal.slider .modal-body .modal-carousel {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 1rem;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.modal.slider .modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal.slider .modal-body .modal-carousel .next-button,
+.modal.slider .modal-body .modal-carousel .prev-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal.slider .modal-body .modal-carousel .prev-button img,
+.modal.slider .modal-body .modal-carousel .next-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal.slider .modal-body .modal-carousel .prev-button {
+  transform: rotate(180deg);
+}
+
+.modal-imgs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 1rem;
+}
+
+.modal-imgs.large-images {
+  height: 500px
+}
+
+.modal-imgs.x-large-images {
+  height: 600px
 }
 
 .modal-body {
   display: flex;
 }
 
-.modal-body img{
-  width: 45%;
+.modal-header {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-imgs .slider {
+  position: absolute;
+  width: 100%;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.modal-imgs .slider.on {
+  opacity: 1;
+}
+
+.modal-body img {
+  width: 40%;
   border-radius: var(--spacing-md);
+  height: auto;
+}
+
+.modal-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1rem;
+  line-height: 1.7;
+  justify-content: center;
+  width: 100%;
+}
+
+.modal-text p {
+  text-align: left;
+  font-family: "krona";
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.modal-text h2 {
+  padding: 0 1rem;
+  font-size: 2rem;
+  font-family: "poet";
+  color: var(--purple);
+}
+
+.close-modal {
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  color: var(--purple);
+  transition: transform 0.3s ease;
+  background: none;
+  border: none;
+}
+
+.close-modal:hover {
+  transform: rotate(180deg) scale(1.2);
 }
 
 .about_links a {

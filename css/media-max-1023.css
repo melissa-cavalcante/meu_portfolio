@@ -329,4 +329,44 @@
     .contact_container .content_contact a {
         font-size: 0.8rem
     }
+
+    .modal {
+        width: 90%;
+    }
+
+    .modal-body {
+        flex-direction: column;
+    }
+
+    .modal-imgs.small-images {
+        height: 150px;
+    }
+
+    .modal-imgs.large-images {
+        height: 300px
+    }
+
+    .modal-imgs.x-large-images {
+        height: 400px
+    }
+
+    .modal-body {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .modal-text p {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-text.small-size {
+        align-items: flex-start;
+    }
+
+    .modal-text h2 {
+        font-size: 1.8rem;
+        text-align: left;
+    }
+
 }
