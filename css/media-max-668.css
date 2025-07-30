@@ -25,7 +25,7 @@
   }
 
   .modal-imgs.large-images {
-    height: 300px
+    height: 250px
   }
 
   .modal-imgs.x-large-images {
@@ -48,5 +48,9 @@
 
   .modal-text h2 {
     font-size: 1.8rem;
+  }
+
+  .modal-body img {
+    width: 80%;
   }
 }

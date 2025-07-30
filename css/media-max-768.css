@@ -110,7 +110,10 @@
     }
 
     .modal-text h2 {
-        font-size: 1.8rem;
-        text-align: left;
+        font-size: 1.8rem;  
     }
+
+    .modal-body img {
+    width: 80%;
+  }
 }

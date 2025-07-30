@@ -152,7 +152,7 @@
   }
 
   .modal-imgs.x-large-images {
-    height: 200px
+    height: 150px
   }
 
   .modal-body {
@@ -171,5 +171,9 @@
 
   .modal-text h2 {
     font-size: 1.8rem;
+  }
+
+  .modal-body img {
+    width: 90%;
   }
 }
